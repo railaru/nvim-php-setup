@@ -63,3 +63,6 @@
 * Improve keybindings for Tabnine autocompletion
 * Formatters for various web frameworks (disabled by default)
 
+### Intelephsense install:
+* npm i intelephense -g
+

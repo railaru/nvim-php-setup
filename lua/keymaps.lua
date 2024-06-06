@@ -85,3 +85,15 @@ vim.cmd([[
   nnoremap <silent> <F1> :FloatermToggle<CR>
   tnoremap <silent> <F1> <C-\><C-n>:FloatermToggle<CR>
 ]])
+
+
+-- shift + f = open telescope to find files
+vim.api.nvim_set_keymap("n", "<S-f>", "<cmd>Telescope find_files<CR>", { noremap = true, silent = true })
+
+-- ctrl + s = save file, same as w + q
+vim.api.nvim_set_keymap("n", "<D-s>", ":w<CR>", { noremap = true, silent = true })
+
+-- shift + t = open trouble view for errors and warnings
+vim.api.nvim_set_keymap("n", "<S-t>", "<cmd>Trouble<CR>", { noremap = true, silent = true })
+-- shift + c = close trouble view
+vim.api.nvim_set_keymap("n", "<S-c>", "<cmd>TroubleClose<CR>", { noremap = true, silent = true })

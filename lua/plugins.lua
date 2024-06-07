@@ -210,6 +210,7 @@ require("lazy").setup({
     -- Themes
     'folke/tokyonight.nvim',
     'marko-cerovac/material.nvim',
+    'ellisonleao/gruvbox.nvim',
     {
         "catppuccin/nvim",
         name = "catppuccin"

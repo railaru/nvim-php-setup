@@ -42,6 +42,7 @@ require('config.nvim_mini_indentscope')
 require('config.nvim_notification')
 require('config.nvim_neogit')
 require('config.nvim_tabnine')
+require("oil").setup()
 
 -- LSP
 require('lsp')

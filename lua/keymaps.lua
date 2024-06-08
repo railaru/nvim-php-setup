@@ -97,3 +97,6 @@ vim.api.nvim_set_keymap("n", "<D-s>", ":w<CR>", { noremap = true, silent = true 
 vim.api.nvim_set_keymap("n", "<S-t>", "<cmd>Trouble<CR>", { noremap = true, silent = true })
 -- shift + c = close trouble view
 vim.api.nvim_set_keymap("n", "<S-c>", "<cmd>TroubleClose<CR>", { noremap = true, silent = true })
+-- open nvim oil
+vim.keymap.set("n", "-", "<CMD>Oil<CR>", { desc = "Open parent directory" })
+

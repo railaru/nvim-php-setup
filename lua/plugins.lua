@@ -208,6 +208,7 @@ require("lazy").setup({
     'dyng/ctrlsf.vim',
 
     -- Themes
+    'projekt0n/github-nvim-theme',
     'folke/tokyonight.nvim',
     'marko-cerovac/material.nvim',
     'ellisonleao/gruvbox.nvim',
@@ -263,4 +264,7 @@ require("lazy").setup({
 
     -- Auto tab width
     'tpope/vim-sleuth',
+
+    -- Oil file Navigation
+    'stevearc/oil.nvim',
 })

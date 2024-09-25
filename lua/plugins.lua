@@ -48,6 +48,15 @@ require("lazy").setup({
             }
         }
     },
+
+    {
+      "prettier/vim-prettier",
+      build = "yarn install",
+      ft = {
+        "javascript", "typescript", "css", "less", "scss", "json", "graphql", "markdown", "vue", "yaml", "html"
+      },
+    },
+
     {
         'folke/trouble.nvim',
         branch = "dev",

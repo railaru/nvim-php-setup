@@ -24,5 +24,20 @@ require 'lspconfig'.tsserver.setup {
       underline = true,
       update_in_insert = true
     })
-  }
+  },
+  on_attach = function(client, bufnr)
+    -- Disable tsserver formatting if you want to use prettier
+    client.server_capabilities.documentFormattingProvider = false
+    client.server_capabilities.documentRangeFormattingProvider = false
+    
+    -- ... (other on_attach code)
+    
+    -- Enable formatting on save
+    vim.api.nvim_create_autocmd("BufWritePre", {
+      buffer = bufnr,
+      callback = function()
+        vim.lsp.buf.format({ async = false })
+      end,
+    })
+  end
 }

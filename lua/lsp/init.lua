@@ -124,3 +124,9 @@ for _, name in pairs(servers) do
     }
   }
 end
+
+require('lspconfig')['eslint'].setup {
+    on_attach = on_attach,
+    capabilities = capabilities,
+    -- Add any specific ESLint settings here
+}

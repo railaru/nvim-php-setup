@@ -23,7 +23,7 @@ require 'lspconfig'.eslint.setup {
         }
       },
       codeActionOnSave = {
-        enable = false,
+        enable = true,
         mode = "all"
       },
       experimental = {

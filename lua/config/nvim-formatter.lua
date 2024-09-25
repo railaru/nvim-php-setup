@@ -9,6 +9,9 @@ local M = {
     typescript = {
       require("formatter.filetypes.typescript").prettier
     },
+    typescriptreact = {
+      require("formatter.filetypes.typescriptreact").prettier
+    }
   }
 }
 

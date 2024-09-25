@@ -10,13 +10,13 @@ require 'lspconfig'.tsserver.setup {
   },
   root_dir = require('lspconfig/util').root_pattern("package.json", "tsconfig.json", "jsconfig.json", ".git"),
   settings = {
-    documentFormatting = true
+    documentFormatting = false
   },
   handlers = {
     ["textDocument/publishDiagnostics"] = vim.lsp.with(vim.lsp.diagnostic.on_publish_diagnostics, {
       virtual_text = {
         spacing = 0,
-        prefix = "",
+        prefix = "",
         signs = true,
         underline = true
       },
@@ -39,5 +39,5 @@ require 'lspconfig'.tsserver.setup {
         vim.lsp.buf.format({ async = false })
       end,
     })
-  end
+  end,
 }

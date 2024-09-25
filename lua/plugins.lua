@@ -55,6 +55,11 @@ require("lazy").setup({
       ft = {
         "javascript", "typescript", "css", "less", "scss", "json", "graphql", "markdown", "vue", "yaml", "html"
       },
+      config = function()
+        vim.g['prettier#autoformat'] = 1
+        vim.g['prettier#autoformat_require_pragma'] = 0
+        vim.g['prettier#exec_cmd_async'] = 1
+      end,
     },
 
     {

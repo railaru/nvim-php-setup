@@ -49,3 +49,15 @@ if vim.g.neovide then
   vim.g.neovide_floating_blur_amount_y = 1.0
 end
 
+vim.o.foldlevel = 99 -- Open all folds by default
+vim.o.foldlevelstart = 99
+vim.o.foldenable = true
+
+vim.api.nvim_create_autocmd("FileType", {
+    pattern = { "typescript", "typescriptreact", "javascript", "javascriptreact" },
+    callback = function()
+        vim.opt_local.foldmethod = "expr"
+        vim.opt_local.foldexpr = "nvim_treesitter#foldexpr()"
+    end
+})
+
